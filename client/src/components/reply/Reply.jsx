@@ -3,7 +3,7 @@ import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import { makeRequest } from "../../axios";
 import moment from "moment";
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
-
+import { Link } from "react-router-dom";
 
 const Reply = ({ comment_id }) => {
 
@@ -22,9 +22,13 @@ const Reply = ({ comment_id }) => {
         : data.map((comment) => (
             <div className="comment" key={comment.id}>
               {comment.profilePic ? (
-                <img src={"/upload/" + comment.profilePic} alt=""/>
+                <Link to={`/profile/${comment.user_id}`}>
+                  <img src={"/upload/" + comment.profilePic} alt=""/>
+                </Link>
               ) : (
-                <AccountCircleIcon className="profilePic" />
+                <Link to={`/profile/${comment.user_id}`}>
+                  <AccountCircleIcon className="profilePic" />
+                </Link>
               )}
               <div className="info">
                 <span>{comment.name}</span>

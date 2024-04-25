@@ -10,6 +10,7 @@ import Snackbar from '@mui/material/Snackbar';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import QuickreplyIcon from '@mui/icons-material/Quickreply';
 import Reply from "../reply/Reply";
+import { Link } from "react-router-dom";
 
 const Comments = ({ post_id, recipientId }) => {
   const [desc, setDesc] = useState("");
@@ -163,9 +164,9 @@ const Comments = ({ post_id, recipientId }) => {
     <div className="comments">
       <div className="write">
         {currentUser.profilePic ? (
-          <img src={"/upload/" + currentUser.profilePic} alt=""/>
+            <img src={"/upload/" + currentUser.profilePic} alt=""/>
         ) : (
-          <AccountCircleIcon className="profilePic" />
+            <AccountCircleIcon className="profilePic" />
         )}
         <textarea
           type="text"
@@ -182,9 +183,13 @@ const Comments = ({ post_id, recipientId }) => {
         : data.map((comment) => (
             <div className="comment" key={comment.id}>
               {comment.profilePic ? (
-                <img src={"/upload/" + comment.profilePic} alt=""/>
+                <Link to={`/profile/${comment.user_id}`}>
+                  <img src={"/upload/" + comment.profilePic} alt=""/>
+                </Link>
               ) : (
-                <AccountCircleIcon className="profilePic" />
+                <Link to={`/profile/${comment.user_id}`}>
+                  <AccountCircleIcon className="profilePic" />
+                </Link>
               )}
               <div className="info">
                 <span>{comment.name}</span>
