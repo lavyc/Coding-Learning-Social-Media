@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    font-family: 'Montserrat',sans-serif;  
+}
+
+$themes: (
+  light: (
+    //light mode
+    textColor: #000,
+    bg: white,
+    logo: hsl(208, 100%, 50%),
+    bgSoft: #f6f3f3,
+    textColorSoft: #555,
+    border: lightgray,
+  ),
+  dark: (
+    //darkmode
+    textColor: whitesmoke,
+    bg: #222,
+    logo: white,
+    bgSoft: #333,
+    textColorSoft: lightgray,
+    border: #444,
+  ),
+);
+
+@mixin themify($themes) {
+  @each $theme, $map in $themes {
+    .theme-#{$theme} & {
+      $theme-map: () !global;
+      @each $key, $submap in $map {
+        $value: map-get(map-get($themes, $theme), "#{$key}");
+        $theme-map: map-merge(
+          $theme-map,
+          (
+            $key: $value,
+          )
+        ) !global;
+      }
+      @content;
+      $theme-map: null !global;
+    }
+  }
+}
+
+@function themed($key) {
+  @return map-get($theme-map, $key);
+}
+
+@mixin mobile {
+  @media (max-width: 480px) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media (max-width: 960px) {
+    @content;
+  }
+}
+
+
+@media screen and (max-width: 500px){
+  .heading{
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
+  }
+}
+
+@media screen and (max-width: 918px){
+  .heading{
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 1rem;
+  }
+  
+}
+
+@media screen and (max-width: 900px){
+  .heading{
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
+  }
+}

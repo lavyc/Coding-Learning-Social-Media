@@ -1,0 +1,12 @@
+.Rposts {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+
+  .no-posts {
+    text-align: center;
+    font-size: 18px;
+    color: #999; // Adjust the color to match your design
+    margin-top: 20px;
+  }
+}

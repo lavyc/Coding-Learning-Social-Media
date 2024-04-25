@@ -1,0 +1,37 @@
+@import "../../style.scss";
+
+.home{
+  @include themify($themes) {
+    padding: 20px 70px;
+    background-color: themed("bgSoft");
+    min-height: 100vh;
+
+    @include mobile {
+      padding: 10px;
+    }
+
+    @include tablet{
+      padding: 20px;
+    }
+  }
+  .page-buttons {
+    display: flex;
+    justify-content: center;
+    position:relative;
+  }
+
+  button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #333; /* Adjust color as needed */
+    transition: color 0.3s ease;
+    font-weight: 500;
+  }
+
+  button:hover {
+    color: #5271ff; /* Adjust color as needed */
+  }
+}

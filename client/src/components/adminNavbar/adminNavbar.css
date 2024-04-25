@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  font-family: "Montserrat", sans-serif;
+}
+
+@media screen and (max-width: 500px) {
+  .heading {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}
+@media screen and (max-width: 918px) {
+  .heading {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}
+@media screen and (max-width: 900px) {
+  .heading {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}
+.theme-light .navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  height: 80px;
+  border-bottom: 1px solid lightgray;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  color: #000;
+  z-index: 999;
+}
+.theme-light .navbar .left {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.theme-light .navbar .left .logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.theme-light .navbar .left .logo {
+  width: 90px;
+  height: auto;
+}
+.theme-light .navbar .left span {
+  font-weight: bold;
+  font-size: 20px;
+  color: hsl(208, 100%, 50%);
+}
+.theme-light .navbar .left .mode {
+  cursor: pointer;
+}
+.theme-dark .navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  height: 80px;
+  border-bottom: 1px solid #444;
+  position: sticky;
+  top: 0;
+  background-color: #222;
+  color: whitesmoke;
+  z-index: 999;
+}
+.theme-dark .navbar .left {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.theme-dark .navbar .left .logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.theme-dark .navbar .left .logo {
+  width: 90px;
+  height: auto;
+}
+.theme-dark .navbar .left span {
+  font-weight: bold;
+  font-size: 20px;
+  color: white;
+}
+.theme-dark .navbar .left .mode {
+  cursor: pointer;
+}/*# sourceMappingURL=adminNavbar.css.map */

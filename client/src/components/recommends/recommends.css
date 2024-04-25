@@ -1,0 +1,11 @@
+.Rposts {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+.Rposts .no-posts {
+  text-align: center;
+  font-size: 18px;
+  color: #999;
+  margin-top: 20px;
+}/*# sourceMappingURL=recommends.css.map */

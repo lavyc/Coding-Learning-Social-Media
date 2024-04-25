@@ -1,0 +1,272 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  font-family: "Montserrat", sans-serif;
+}
+
+@media screen and (max-width: 500px) {
+  .heading {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}
+@media screen and (max-width: 918px) {
+  .heading {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}
+@media screen and (max-width: 900px) {
+  .heading {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}
+.theme-light .leftBar {
+  flex: 2;
+  position: sticky;
+  top: 70px;
+  height: calc(100vh - 0px);
+  overflow-y: auto;
+  background-color: white;
+  color: #000;
+}
+@media (max-width: 480px) {
+  .theme-light .leftBar {
+    display: none;
+  }
+}
+.theme-light .leftBar::-webkit-scrollbar {
+  display: none;
+}
+.theme-light .leftBar .container {
+  padding: 20px;
+  font-weight: 500;
+}
+.theme-light .leftBar .container hr {
+  margin: 20px 0px;
+  border: none;
+  height: 0.5px;
+  background-color: lightgray;
+}
+.theme-light .leftBar .container .menu {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.theme-light .leftBar .container .menu span {
+  font-size: 12px;
+}
+.theme-light .leftBar .container .menu .user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.theme-light .leftBar .container .menu .user img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.theme-light .leftBar .container .menu .user span {
+  font-size: 14px;
+}
+.theme-light .leftBar .container .menu button {
+  border: none;
+  background-color: transparent;
+  font-weight: 500;
+  cursor: pointer;
+}
+.theme-light .leftBar .container .menu .item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 10px;
+}
+.theme-light .leftBar .container .menu .item img {
+  width: 30px;
+}
+.theme-light .leftBar .container .menu .item span {
+  font-size: 14px;
+}
+.theme-light .leftBar .container .menu .item .logout-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.theme-light .leftBar .container .menu .friend {
+  box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.09);
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.theme-light .leftBar .container .menu .friend:hover {
+  box-shadow: 0px 0px 25px -10px orange;
+}
+.theme-light .leftBar .container .menu .friend .friend-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.theme-light .leftBar .container .menu .friend span {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+.theme-light .leftBar .container .menu .friend .friend-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  text-align: center;
+}
+.theme-light .leftBar .container .menu .friend .friend-item span {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+.theme-light .leftBar .container .menu .friend .friend-item img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.theme-light .leftBar .container .menu .friend .friend-item .profilePic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.theme-dark .leftBar {
+  flex: 2;
+  position: sticky;
+  top: 70px;
+  height: calc(100vh - 0px);
+  overflow-y: auto;
+  background-color: #222;
+  color: whitesmoke;
+}
+@media (max-width: 480px) {
+  .theme-dark .leftBar {
+    display: none;
+  }
+}
+.theme-dark .leftBar::-webkit-scrollbar {
+  display: none;
+}
+.theme-dark .leftBar .container {
+  padding: 20px;
+  font-weight: 500;
+}
+.theme-dark .leftBar .container hr {
+  margin: 20px 0px;
+  border: none;
+  height: 0.5px;
+  background-color: #444;
+}
+.theme-dark .leftBar .container .menu {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.theme-dark .leftBar .container .menu span {
+  font-size: 12px;
+}
+.theme-dark .leftBar .container .menu .user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.theme-dark .leftBar .container .menu .user img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.theme-dark .leftBar .container .menu .user span {
+  font-size: 14px;
+}
+.theme-dark .leftBar .container .menu button {
+  border: none;
+  background-color: transparent;
+  font-weight: 500;
+  cursor: pointer;
+}
+.theme-dark .leftBar .container .menu .item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 10px;
+}
+.theme-dark .leftBar .container .menu .item img {
+  width: 30px;
+}
+.theme-dark .leftBar .container .menu .item span {
+  font-size: 14px;
+}
+.theme-dark .leftBar .container .menu .item .logout-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.theme-dark .leftBar .container .menu .friend {
+  box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.09);
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: #222;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.theme-dark .leftBar .container .menu .friend:hover {
+  box-shadow: 0px 0px 25px -10px orange;
+}
+.theme-dark .leftBar .container .menu .friend .friend-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.theme-dark .leftBar .container .menu .friend span {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+.theme-dark .leftBar .container .menu .friend .friend-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  text-align: center;
+}
+.theme-dark .leftBar .container .menu .friend .friend-item span {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+.theme-dark .leftBar .container .menu .friend .friend-item img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.theme-dark .leftBar .container .menu .friend .friend-item .profilePic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}/*# sourceMappingURL=leftBar.css.map */

@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  font-family: "Montserrat", sans-serif;
+}
+
+@media screen and (max-width: 500px) {
+  .heading {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}
+@media screen and (max-width: 918px) {
+  .heading {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}
+@media screen and (max-width: 900px) {
+  .heading {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}
+.theme-light .comments .comment {
+  margin: 30px 0px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  border-top: 1.5px solid lightgray;
+  padding-top: 20px;
+}
+.theme-light .comments .comment img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.theme-light .comments .comment .info {
+  flex: 5;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  align-items: flex-start;
+}
+.theme-light .comments .comment .info span {
+  font-weight: 500;
+  align-self: flex-start;
+}
+.theme-light .comments .comment .info .comment-text {
+  color: #555;
+  font-weight: 500;
+  white-space: pre-wrap;
+  align-self: flex-start;
+}
+.theme-light .comments .comment .date {
+  align-self: flex-start;
+  color: gray;
+  font-size: 12px;
+  margin-top: 10px;
+}
+.theme-light .comments .comment .more-icon {
+  flex-direction: column;
+  display: flex;
+  align-items: flex-end;
+}
+.theme-light .comments .comment .more-icon button {
+  border: none;
+  background-color: #f0544f;
+  padding: 5px;
+  cursor: pointer;
+  color: white;
+  border-radius: 5px;
+}
+.theme-light .comments .comment .more-icon button:hover {
+  background-color: #d22721;
+}
+.theme-light .comments .comment .more-icon .replyIcon {
+  cursor: pointer;
+  margin-top: 20px;
+}
+.theme-dark .comments .comment {
+  margin: 30px 0px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  border-top: 1.5px solid #444;
+  padding-top: 20px;
+}
+.theme-dark .comments .comment img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.theme-dark .comments .comment .info {
+  flex: 5;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  align-items: flex-start;
+}
+.theme-dark .comments .comment .info span {
+  font-weight: 500;
+  align-self: flex-start;
+}
+.theme-dark .comments .comment .info .comment-text {
+  color: lightgray;
+  font-weight: 500;
+  white-space: pre-wrap;
+  align-self: flex-start;
+}
+.theme-dark .comments .comment .date {
+  align-self: flex-start;
+  color: gray;
+  font-size: 12px;
+  margin-top: 10px;
+}
+.theme-dark .comments .comment .more-icon {
+  flex-direction: column;
+  display: flex;
+  align-items: flex-end;
+}
+.theme-dark .comments .comment .more-icon button {
+  border: none;
+  background-color: #f0544f;
+  padding: 5px;
+  cursor: pointer;
+  color: white;
+  border-radius: 5px;
+}
+.theme-dark .comments .comment .more-icon button:hover {
+  background-color: #d22721;
+}
+.theme-dark .comments .comment .more-icon .replyIcon {
+  cursor: pointer;
+  margin-top: 20px;
+}/*# sourceMappingURL=adminDeleteComment.css.map */

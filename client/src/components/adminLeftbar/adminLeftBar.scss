@@ -1,0 +1,97 @@
+@import "../../style.scss";
+
+.leftBar {
+  @include themify($themes) {
+    flex: 2;
+    position: sticky;
+    top: 70px;
+    //height: calc(100vh - 0px); //to make the bar stays at the top when scrolling the posts
+    //overflow-y: auto; //scroll the left bar not the posts 
+    background-color: themed("bg");
+    color: themed("textColor");
+    max-width: 200px;
+
+    @include mobile{
+      display: none;
+    }
+
+    &::-webkit-scrollbar {
+      display: none; //hide the scroll bar 
+    }
+
+    .container {
+      padding: 20px;
+      font-weight: 500;
+
+      hr {
+        margin: 20px 0px;
+        border: none;
+        height: 0.5px;
+        background-color: themed("border");
+      }
+
+      .menu {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        span {
+          font-size: 12px;
+        }
+
+        .user {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+
+          img {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            object-fit: cover;
+          }
+
+          .profilePic{
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+          }
+
+          span {
+            font-size: 14px;
+          }
+        }
+
+        button{
+          border: none;
+          background-color: transparent;
+          font-weight: 500;
+          cursor: pointer;
+        }
+
+        .item {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          padding-bottom: 10px;
+
+          img {
+            width: 30px;
+          }
+
+          span {
+            font-size: 14px;
+          }
+          
+          .logout-icon {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            object-fit: cover;
+          }
+
+        }
+      }
+    }
+  }
+}

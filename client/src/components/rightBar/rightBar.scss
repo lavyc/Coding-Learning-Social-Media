@@ -1,0 +1,127 @@
+@import "../../style.scss";
+
+.rightBar {
+  @include themify($themes) {
+    flex: 3;
+    position: sticky;
+    top: 0px;
+    height: calc(100vh - 0px);
+    overflow-y: auto; 
+    background-color: themed("bgSoft");
+
+    @include mobile{
+      display: none;
+    }
+    @include tablet{
+      display: none;
+    }
+
+    &::-webkit-scrollbar {
+      display: none;
+    } //hide the scroll bar
+
+    .container {
+      padding: 20px;
+
+      .item {
+        -webkit-box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.09);
+        -moz-box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.09);//create shadow
+        box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.09);
+        padding: 20px;
+        margin-bottom: 20px;
+        background-color: themed("bg");
+        border-radius: 10px;
+
+        &:hover {
+          -webkit-box-shadow: 0px 0px 25px -10px orange;
+          -moz-box-shadow: 0px 0px 25px -10px orange;
+          box-shadow: 0px 0px 25px -10px orange;
+        }
+
+        span {
+          color: orange;
+          font-weight: 600;
+          font-size: 20px;
+        }
+
+        .user {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin: 20px 0px;
+
+          .userInfo {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            position: relative;
+
+            img {
+              width: 40px;
+              height: 40px;
+              border-radius: 50%;
+              object-fit: cover;
+            }
+
+            .profilePic{
+              width: 40px;
+              height: 40px;
+              border-radius: 50%;
+            }
+
+            .date {
+              font-weight: 500;
+              color: themed("textColor");
+            }
+
+            .name{
+              font-size: 15px;
+            }
+          }
+        }
+      }
+    }
+
+    .item{
+      -webkit-box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.09);
+      -moz-box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.09);//create shadow
+      box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.09);
+      padding: 20px;
+      margin-bottom: 20px;
+      background-color: themed("bg");
+      border-radius: 10px;
+
+      .user {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 15px; /* Adjust spacing as needed */
+
+        .userInfo {
+          display: flex;
+          align-items: center;
+          white-space: nowrap; 
+
+          .desc{
+            font-size: 14px; 
+            color: #666;
+            overflow: hidden; // Hide overflowing content
+            text-overflow: ellipsis; //Display ellipsis for overflowed text 
+            white-space: nowrap; // Prevent wrapping text to new lines 
+            max-width: 200px;
+          }
+
+          .name{
+            font-size: 14px;
+            font-weight: 500;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            width: 60px;
+          }
+        }
+      }
+
+    }
+  }
+}

@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  font-family: "Montserrat", sans-serif;
+}
+
+@media screen and (max-width: 500px) {
+  .heading {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}
+@media screen and (max-width: 918px) {
+  .heading {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}
+@media screen and (max-width: 900px) {
+  .heading {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}
+.theme-light .leftBar {
+  flex: 2;
+  position: sticky;
+  top: 70px;
+  background-color: white;
+  color: #000;
+  max-width: 200px;
+}
+@media (max-width: 480px) {
+  .theme-light .leftBar {
+    display: none;
+  }
+}
+.theme-light .leftBar::-webkit-scrollbar {
+  display: none;
+}
+.theme-light .leftBar .container {
+  padding: 20px;
+  font-weight: 500;
+}
+.theme-light .leftBar .container hr {
+  margin: 20px 0px;
+  border: none;
+  height: 0.5px;
+  background-color: lightgray;
+}
+.theme-light .leftBar .container .menu {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.theme-light .leftBar .container .menu span {
+  font-size: 12px;
+}
+.theme-light .leftBar .container .menu .user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.theme-light .leftBar .container .menu .user img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.theme-light .leftBar .container .menu .user .profilePic {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+.theme-light .leftBar .container .menu .user span {
+  font-size: 14px;
+}
+.theme-light .leftBar .container .menu button {
+  border: none;
+  background-color: transparent;
+  font-weight: 500;
+  cursor: pointer;
+}
+.theme-light .leftBar .container .menu .item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 10px;
+}
+.theme-light .leftBar .container .menu .item img {
+  width: 30px;
+}
+.theme-light .leftBar .container .menu .item span {
+  font-size: 14px;
+}
+.theme-light .leftBar .container .menu .item .logout-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.theme-dark .leftBar {
+  flex: 2;
+  position: sticky;
+  top: 70px;
+  background-color: #222;
+  color: whitesmoke;
+  max-width: 200px;
+}
+@media (max-width: 480px) {
+  .theme-dark .leftBar {
+    display: none;
+  }
+}
+.theme-dark .leftBar::-webkit-scrollbar {
+  display: none;
+}
+.theme-dark .leftBar .container {
+  padding: 20px;
+  font-weight: 500;
+}
+.theme-dark .leftBar .container hr {
+  margin: 20px 0px;
+  border: none;
+  height: 0.5px;
+  background-color: #444;
+}
+.theme-dark .leftBar .container .menu {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.theme-dark .leftBar .container .menu span {
+  font-size: 12px;
+}
+.theme-dark .leftBar .container .menu .user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.theme-dark .leftBar .container .menu .user img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.theme-dark .leftBar .container .menu .user .profilePic {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+.theme-dark .leftBar .container .menu .user span {
+  font-size: 14px;
+}
+.theme-dark .leftBar .container .menu button {
+  border: none;
+  background-color: transparent;
+  font-weight: 500;
+  cursor: pointer;
+}
+.theme-dark .leftBar .container .menu .item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 10px;
+}
+.theme-dark .leftBar .container .menu .item img {
+  width: 30px;
+}
+.theme-dark .leftBar .container .menu .item span {
+  font-size: 14px;
+}
+.theme-dark .leftBar .container .menu .item .logout-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}/*# sourceMappingURL=adminLeftBar.css.map */

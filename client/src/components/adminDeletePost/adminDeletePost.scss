@@ -1,0 +1,128 @@
+@import "../../style.scss";
+
+.post {
+  @include themify($themes) {
+    -webkit-box-shadow: 0px 0px 25px -10px rgba(0, 0, 0, 0.38);
+    -moz-box-shadow: 0px 0px 25px -10px rgba(0, 0, 0, 0.38);
+    box-shadow: 0px 0px 25px -10px rgba(0, 0, 0, 0.38);
+    border-radius: 20px;
+    background-color: themed("bg");
+    color: themed("textColor");
+    justify-content: center;
+
+    .container {
+      padding: 20px;
+      max-width: 1000px;
+      //justify-content: center;
+
+      .user {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+
+        .userInfo {
+          display: flex;
+          gap: 20px;
+
+          img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+          }
+
+          .details {
+            display: flex;
+            flex-direction: column;
+
+            .name {
+              font-weight: 500;
+            }
+
+            .date {
+              font-size: 12px;
+            }
+          }
+        }
+        button {
+          position: absolute;
+          top: 30px;
+          right: 0;
+          border: none;
+          background-color: #f0544f;
+          padding: 5px;
+          cursor: pointer;
+          color: white;
+          border-radius: 5px;
+        }
+
+        button:hover {
+          background-color: #d22721;
+        }
+      }
+
+      .content {
+        margin: 20px 0px;
+        font-weight: 450;
+        overflow: auto;
+
+        .post-text{
+          color:themed("textColorSoft");
+          font-weight:500;
+          margin-top: 5px;
+          white-space: pre-wrap;// Preserve line breaks and wrap long lines
+          max-width: 100%;
+        }
+
+        .media {
+          margin-top: 20px; // Add margin-top to create space between media and text
+
+          img,
+          video {
+            width: 100%;
+            max-height: 500px;
+            object-fit: cover;
+          }
+
+          a {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+            text-decoration: none; // Remove underline from links
+            color: inherit; // Inherit text color
+          }
+        }
+
+        &::-webkit-scrollbar {
+          height: 8px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+          background-color: hsl(201, 100%, 79% ); // Set scrollbar thumb color
+          border-radius: 5px;
+        }
+
+        &::-webkit-scrollbar-track {
+          background-color: transparent; // Set scrollbar track color
+        }
+        
+      }
+      
+      .info {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        .item {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          cursor: pointer;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

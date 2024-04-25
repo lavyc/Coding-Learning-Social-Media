@@ -1,0 +1,234 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  font-family: "Montserrat", sans-serif;
+}
+
+@media screen and (max-width: 500px) {
+  .heading {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}
+@media screen and (max-width: 918px) {
+  .heading {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}
+@media screen and (max-width: 900px) {
+  .heading {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}
+.theme-light .rightBar {
+  flex: 3;
+  position: sticky;
+  top: 0px;
+  height: calc(100vh - 0px);
+  overflow-y: auto;
+  background-color: #f6f3f3;
+}
+@media (max-width: 480px) {
+  .theme-light .rightBar {
+    display: none;
+  }
+}
+@media (max-width: 960px) {
+  .theme-light .rightBar {
+    display: none;
+  }
+}
+.theme-light .rightBar::-webkit-scrollbar {
+  display: none;
+}
+.theme-light .rightBar .container {
+  padding: 20px;
+}
+.theme-light .rightBar .container .item {
+  box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.09);
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: white;
+  border-radius: 10px;
+}
+.theme-light .rightBar .container .item:hover {
+  box-shadow: 0px 0px 25px -10px orange;
+}
+.theme-light .rightBar .container .item span {
+  color: orange;
+  font-weight: 600;
+  font-size: 20px;
+}
+.theme-light .rightBar .container .item .user {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 0px;
+}
+.theme-light .rightBar .container .item .user .userInfo {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+}
+.theme-light .rightBar .container .item .user .userInfo img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.theme-light .rightBar .container .item .user .userInfo .profilePic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.theme-light .rightBar .container .item .user .userInfo .date {
+  font-weight: 500;
+  color: #000;
+}
+.theme-light .rightBar .container .item .user .userInfo .name {
+  font-size: 15px;
+}
+.theme-light .rightBar .item {
+  box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.09);
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: white;
+  border-radius: 10px;
+}
+.theme-light .rightBar .item .user {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px; /* Adjust spacing as needed */
+}
+.theme-light .rightBar .item .user .userInfo {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+.theme-light .rightBar .item .user .userInfo .desc {
+  font-size: 14px;
+  color: #666;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 200px;
+}
+.theme-light .rightBar .item .user .userInfo .name {
+  font-size: 14px;
+  font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 60px;
+}
+.theme-dark .rightBar {
+  flex: 3;
+  position: sticky;
+  top: 0px;
+  height: calc(100vh - 0px);
+  overflow-y: auto;
+  background-color: #333;
+}
+@media (max-width: 480px) {
+  .theme-dark .rightBar {
+    display: none;
+  }
+}
+@media (max-width: 960px) {
+  .theme-dark .rightBar {
+    display: none;
+  }
+}
+.theme-dark .rightBar::-webkit-scrollbar {
+  display: none;
+}
+.theme-dark .rightBar .container {
+  padding: 20px;
+}
+.theme-dark .rightBar .container .item {
+  box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.09);
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: #222;
+  border-radius: 10px;
+}
+.theme-dark .rightBar .container .item:hover {
+  box-shadow: 0px 0px 25px -10px orange;
+}
+.theme-dark .rightBar .container .item span {
+  color: orange;
+  font-weight: 600;
+  font-size: 20px;
+}
+.theme-dark .rightBar .container .item .user {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 0px;
+}
+.theme-dark .rightBar .container .item .user .userInfo {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+}
+.theme-dark .rightBar .container .item .user .userInfo img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.theme-dark .rightBar .container .item .user .userInfo .profilePic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.theme-dark .rightBar .container .item .user .userInfo .date {
+  font-weight: 500;
+  color: whitesmoke;
+}
+.theme-dark .rightBar .container .item .user .userInfo .name {
+  font-size: 15px;
+}
+.theme-dark .rightBar .item {
+  box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.09);
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: #222;
+  border-radius: 10px;
+}
+.theme-dark .rightBar .item .user {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px; /* Adjust spacing as needed */
+}
+.theme-dark .rightBar .item .user .userInfo {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+.theme-dark .rightBar .item .user .userInfo .desc {
+  font-size: 14px;
+  color: #666;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 200px;
+}
+.theme-dark .rightBar .item .user .userInfo .name {
+  font-size: 14px;
+  font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 60px;
+}/*# sourceMappingURL=rightBar.css.map */

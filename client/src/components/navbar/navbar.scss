@@ -1,0 +1,226 @@
+@import "../../style.scss";
+
+.navbar {
+  @include themify($themes) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    height: 80px;
+    border-bottom: 1px solid themed("border");
+    position: sticky;
+    top: 0;
+    background-color: themed("bg");
+    color:themed("textColor");
+    z-index: 999;
+
+    .left {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+
+      .logo-container {
+        display: flex;
+        flex-direction: column; //Stack logo and text vertically 
+        align-items: center;
+      }
+    
+      .logo {
+        width: 90px;
+        height: auto;
+      }
+
+      span {
+        font-weight: bold;
+        font-size: 20px;
+        color: themed("logo");
+      }
+
+      .search {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        border: 1px solid themed("border");
+        border-radius: 10px;
+        padding: 10px 15px;
+
+        &:hover {
+          -webkit-box-shadow: 0px 0px 25px -10px rgb(230, 105, 28);
+          -moz-box-shadow: 0px 0px 25px -10px rgb(230, 105, 28);
+          box-shadow: 0px 0px 25px -10px rgb(230, 105, 28);
+        }
+
+        button{
+          border-radius: 5px;
+          border: none;
+          background-color: hsl(208, 100%, 50%);
+          color: white;
+          padding: 10px;
+          cursor: pointer;
+        }
+
+        button:hover {
+          background-color: hsl(201, 100%, 79% );
+          color: black;
+        }
+
+        input {
+          border: none;
+          padding: 5px;
+          width: 550px;
+          height: 40px;
+          background-color: transparent;
+          color: themed("textColor");
+          font-size: 16px;
+          font-weight: 500;
+
+          @include mobile{
+            display: none;
+          }
+
+          @include tablet{
+            width: 200px;
+          }
+        }
+      }
+      .mode{
+        cursor: pointer;
+      }
+    }
+
+    .right {
+      display: flex;
+      align-items: center;
+      position: relative;
+      
+      .newNoti {//create the circle for new notification
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background-color: rgb(48, 122, 224);
+        position: absolute;
+        top: 0;
+        left: 0px; 
+      }
+
+      @include mobile{
+        display: none;
+      }
+
+      .user {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: 500;
+
+        @include tablet{
+          display: none;
+        }
+
+        img {
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+          object-fit: cover;
+          margin-left: 20px;
+        }
+
+        .profilePic{
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+          object-fit: cover;
+          margin-left: 20px;
+        }
+      }
+      .mode{
+        cursor: pointer;
+      }
+    }
+    .notifications{
+      position: absolute;
+      top: calc(100%);
+      right: 0;
+      width: 300px;
+      max-height: 400px; 
+      background-color: #fff;
+      border: 1px solid hsl(208, 100%, 50%);
+      border-radius: 4px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      padding: 10px;
+      z-index: 1000;
+      overflow-y: auto;
+      
+        &::-webkit-scrollbar {
+          width: 10px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+          background-color: hsl(201, 100%, 79% ); // Set scrollbar thumb color
+          border-radius: 5px;
+        }
+
+        &::-webkit-scrollbar-track {
+          background-color: transparent; // Set scrollbar track color
+        }
+
+      .notification {
+        margin-bottom: 10px; 
+        padding-bottom: 10px;
+        font-size: 14px;
+        padding: 15px;
+        
+        border-bottom: 1px solid hsl(208, 100%, 50%); //separate each notification with a line
+    
+        &:last-child {
+          border-bottom: none;
+        }
+
+        position: relative;
+        overflow: auto;
+
+        span {
+          &:not(.timestamp) {
+            color: #333; // Set the color of the notification content
+          }
+    
+          &.timestamp {
+            font-size: 12px;
+            color: #999; 
+            position: absolute; 
+            bottom: 1px;
+            right: 10px; 
+          }
+        }
+
+        &.unread {
+          background-color: hsl(201, 100%, 79% ); // or any other color you prefer
+        }
+
+      }
+      button{
+        border-radius: 5px;
+        border: none;
+        background-color: hsl(208, 100%, 50%);
+        color: white;
+        padding: 5px;
+        font-size: 12px;
+        cursor: pointer;
+      }
+    }
+    .no-notifications{
+      position: absolute;
+      top: calc(100%);
+      right: 0;
+      width: 300px;
+      max-height: 300px; 
+      background-color: #fff;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      padding: 10px;
+      z-index: 1000;
+      font-size: 14px;
+    }
+  }
+}

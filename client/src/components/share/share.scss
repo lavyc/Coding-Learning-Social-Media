@@ -1,0 +1,136 @@
+@import "../../style.scss";
+
+.share {
+  @include themify($themes) {
+    -webkit-box-shadow: 0px 0px 25px -10px rgba(0, 0, 0, 0.38);
+    -moz-box-shadow: 0px 0px 25px -10px rgba(0, 0, 0, 0.38);
+    box-shadow: 0px 0px 25px -10px rgba(0, 0, 0, 0.38);
+    border-radius: 20px;
+    background-color: themed("bg");
+    color: themed("textColor");
+    margin-bottom: 20px;
+    width: 800px;
+  
+
+    .container {
+      padding: 20px;
+      border: 1.5px solid hsl(208, 100%, 50%);
+      border-radius: 20px; 
+
+      &:hover {
+        -webkit-box-shadow: 0px 0px 25px -10px hsl(208, 100%, 50%);
+        -moz-box-shadow: 0px 0px 25px -10px hsl(208, 100%, 50%);
+        box-shadow: 0px 0px 25px -10px hsl(208, 100%, 50%);
+      }
+
+      .top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .left {
+          display: flex;
+          align-items: center;
+          flex: 3;
+          gap: 15px;
+          img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+          }
+
+          textarea {
+            //border: 1px solid themed("border");
+            border: 1px solid hsl(208, 100%, 50%);
+            border-radius: 5px;
+            padding: 10px;
+            padding: 20px 10px;
+            background-color: transparent;
+            width: 100%;
+            color: themed("textColor");
+            resize: vertical;
+            overflow: auto;
+            min-height: 80px;
+
+            &:hover {
+              -webkit-box-shadow: 0px 0px 25px -10px hsl(208, 100%, 50%);
+              -moz-box-shadow: 0px 0px 25px -10px hsl(208, 100%, 50%);
+              box-shadow: 0px 0px 25px -10px hsl(208, 100%, 50%);
+            }
+            // Customize scrollbar
+            &::-webkit-scrollbar {
+              width: 10px;
+            }
+
+            &::-webkit-scrollbar-thumb {
+              background-color: hsl(201, 100%, 79% ); // Set scrollbar thumb color
+              border-radius: 5px;
+            }
+
+            &::-webkit-scrollbar-track {
+              background-color: transparent; // Set scrollbar track color
+            }
+          }
+        }
+        .right {
+          flex: 1;
+          display: flex;
+          justify-content: flex-end;
+          .file {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 0px;
+          }
+        }
+      }
+
+      hr {
+        margin: 20px 0px;
+        border: none;
+        height: 0.5px;
+        background-color: themed("border");
+      }
+
+      .bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .left {
+          display: flex;
+          align-items: center;
+          gap: 20px;
+
+          .item {
+            display: flex;
+            flex-wrap: wrap;//Allow items to wrap onto multiple lines
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+
+            span {
+              font-size: 12px;
+              color: gray;
+            }
+          }
+        }
+        .right {
+          button {
+            border: none;
+            padding: 5px;
+            color: white;
+            cursor: pointer;
+            background-color: #5271ff;
+            border-radius: 3px;
+          }
+          
+          button:hover {
+            background-color: hsl(201, 100%, 79% );
+            color: black;
+          }
+        }
+      }
+    }
+  }
+}

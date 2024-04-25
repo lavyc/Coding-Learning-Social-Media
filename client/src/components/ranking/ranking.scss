@@ -1,0 +1,282 @@
+@import "../../style.scss";
+
+.home{
+  @include themify($themes) {
+    padding: 20px 70px;
+    background-color: themed("bgSoft");
+    min-height: 100vh;
+
+    @include mobile {
+      padding: 10px;
+    }
+
+    @include tablet{
+      padding: 20px;
+    }
+    .ranking{
+      padding: 20px 70px;
+
+      @include mobile{
+        padding: 10px;
+      }
+
+      @include tablet{
+        padding: 20px;
+      }
+
+      height: auto;
+      color: themed("textColor");
+      padding: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 20px;
+      gap: 20px;
+
+      .ranking-itemRight{
+        height: 260px;
+        width: 260px;
+        -webkit-box-shadow: 0px 0px 25px -10px hsl(208, 100%, 50%);
+        -moz-box-shadow: 0px 0px 25px -10px hsl(208, 100%, 50%);
+        box-shadow: 0px 0px 25px -10px hsl(208, 100%, 50%);
+        border-radius: 20px;
+        background-color: themed("bg");
+        color: themed("textColor");
+        padding: 50px;
+        display: flex;
+        align-items: center;
+        //justify-content: space-between;
+        margin-bottom: 20px;
+        gap: 20px;
+        justify-content: center;
+        text-align: center;
+
+        .user-info-container {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 10px;
+
+          img {
+            width: 150px;
+            height: 150px; 
+            border-radius: 50%; //Make the profile picture round
+            object-fit: cover;
+          }
+          span{
+            font-size: 18px;
+            font-weight: 550;
+            padding: 50px;
+          }
+
+          div{
+            font-size: 15px;
+            font-weight: 550;
+          }
+          p {
+            margin-top: 20px; 
+            font-size: larger;
+            font-weight: 500;
+            text-align: center; 
+          }
+          .profilePic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-left: 10px;
+            margin-right: 10px;
+          }
+        }
+      }
+
+      .ranking-itemMiddle{
+        height: 320px;
+        width: 320px;
+        -webkit-box-shadow: 0px 0px 25px -10px hsl(208, 100%, 50%);
+        -moz-box-shadow: 0px 0px 25px -10px hsl(208, 100%, 50%);
+        box-shadow: 0px 0px 25px -10px hsl(208, 100%, 50%);
+        border-radius: 20px;
+        background-color: themed("bg");
+        color: themed("textColor");
+        padding: 50px;
+        display: flex;
+        align-items: center;
+        //justify-content: space-between;
+        margin-bottom: 20px;
+        gap: 20px;
+        justify-content: center;
+        text-align: center;
+
+        .user-info-container {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 10px;
+
+          img {
+            width: 200px; 
+            height: 200px; 
+            border-radius: 50%; 
+            object-fit: cover;
+          }
+          span{
+            font-size: 20px;
+            font-weight: 600;
+            padding: 50px;
+            flex-direction: column;
+          }
+          div{
+            font-size: 15px;
+            font-weight: 550;
+          }
+          p {
+            margin-top: 20px;
+            font-size: large;
+            text-align: center;
+            font-weight: 500;
+          }
+          .profilePic {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            margin-left: 10px;
+            margin-right: 10px;
+          }
+        }
+      }
+
+      .ranking-itemLeft{
+        height: 200px;
+        width: 200px;
+        -webkit-box-shadow: 0px 0px 25px -10px hsl(208, 100%, 50%);
+        -moz-box-shadow: 0px 0px 25px -10px hsl(208, 100%, 50%);
+        box-shadow: 0px 0px 25px -10px hsl(208, 100%, 50%);
+        border-radius: 20px;
+        background-color: themed("bg");
+        color: themed("textColor");
+        padding: 50px;
+        display: flex;
+        align-items: center;
+        //justify-content: space-between;
+        margin-bottom: 20px;
+        gap: 20px;
+        justify-content: center;
+        text-align: center;
+
+        .user-info-container {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 10px;
+
+          img {
+            width: 100px; 
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+          }
+          span{
+            font-size: 16px;
+            font-weight: 500;
+            padding: 50px;
+            flex-direction: column;
+          }
+          div{
+            font-size: 15px;
+            font-weight: 550;
+          }
+          p {
+            margin-top: 20px;
+            font-size: medium;
+            text-align: center;
+            font-weight: 500;
+          }
+          .profilePic {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-left: 10px;
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+    .remaining-users{
+      max-height: 500px;
+      max-width: 500px;
+      -webkit-box-shadow: 0px 0px 25px -10px rgba(0, 0, 0, 0.38);
+      -moz-box-shadow: 0px 0px 25px -10px rgba(0, 0, 0, 0.38);
+      box-shadow: 0px 0px 25px -10px rgba(0, 0, 0, 0.38);
+      border-radius: 15px;
+      background-color: themed("bg");
+      color: themed("textColor");
+      padding: 50px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      flex-direction: column;
+      margin: 0 auto;
+      overflow-y: auto;
+      overflow-x: auto;
+
+        &::-webkit-scrollbar {
+          width: 10px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+          background-color: hsl(201, 100%, 79% ); // Set scrollbar thumb color
+          border-radius: 5px;
+        }
+
+        &::-webkit-scrollbar-track {
+          background-color: transparent; // Set scrollbar track color
+        }
+
+      .user-info-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        padding: 10px;
+        background-color: rgb(6, 193, 250);
+        justify-content: space-between;
+        text-align: center;
+
+        .rank {
+          font-weight: 500;
+          margin-bottom: 5px;
+          margin-right: auto;
+        }
+
+        img {
+          width: 90px; 
+          height: 90px;
+          border-radius: 50%;
+          object-fit: cover;
+          margin-left: 10px;
+          margin-right: 10px;
+        }
+
+        .profilePic {
+          width: 90px;
+          height: 90px;
+          border-radius: 50%;
+          margin-left: 10px;
+          margin-right: 10px;
+        }
+        .username{
+          font-size: 15px;
+          font-weight: 550;
+        }
+        p{
+          font-size: 15px;
+          font-weight: 500;
+          padding: 5px;
+          margin-left: auto;
+        }
+      }
+      
+    }
+  }
+}

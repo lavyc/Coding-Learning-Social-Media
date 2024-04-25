@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  font-family: "Montserrat", sans-serif;
+}
+
+@media screen and (max-width: 500px) {
+  .heading {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}
+@media screen and (max-width: 918px) {
+  .heading {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}
+@media screen and (max-width: 900px) {
+  .heading {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}
+.theme-light .replies .comment {
+  margin: 30px 0px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  border-top: 1.5px solid lightgray;
+  padding-top: 20px;
+}
+.theme-light .replies .comment img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.theme-light .replies .comment .profilePic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.theme-light .replies .comment .info {
+  max-width: 80%;
+  flex: 5;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  align-items: flex-start;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+.theme-light .replies .comment .info span {
+  max-width: 100%;
+  font-weight: 500;
+  align-self: flex-start;
+}
+.theme-light .replies .comment .info .comment-text {
+  color: #555;
+  font-weight: 500;
+  max-width: 100%;
+  white-space: pre-wrap;
+  align-self: flex-start;
+}
+.theme-light .replies .comment .date {
+  align-self: flex-start;
+  color: gray;
+  font-size: 12px;
+  margin-top: 10px;
+}
+.theme-dark .replies .comment {
+  margin: 30px 0px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  border-top: 1.5px solid #444;
+  padding-top: 20px;
+}
+.theme-dark .replies .comment img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.theme-dark .replies .comment .profilePic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.theme-dark .replies .comment .info {
+  max-width: 80%;
+  flex: 5;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  align-items: flex-start;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+.theme-dark .replies .comment .info span {
+  max-width: 100%;
+  font-weight: 500;
+  align-self: flex-start;
+}
+.theme-dark .replies .comment .info .comment-text {
+  color: lightgray;
+  font-weight: 500;
+  max-width: 100%;
+  white-space: pre-wrap;
+  align-self: flex-start;
+}
+.theme-dark .replies .comment .date {
+  align-self: flex-start;
+  color: gray;
+  font-size: 12px;
+  margin-top: 10px;
+}/*# sourceMappingURL=adminOpenReply.css.map */
