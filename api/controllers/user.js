@@ -33,7 +33,7 @@ export const updateUser = (req, res) => {
   jwt.verify(token, "secretkey", (err, userInfo) => {
     if (err) return res.status(403).json("Token is not valid!");
 
-    const { email, username, name, coverPic, profilePic } = req.body;
+    const { email, name, coverPic, profilePic } = req.body;
     const userId = userInfo.id;
 
     // Validate profile picture and cover picture format
@@ -45,7 +45,7 @@ export const updateUser = (req, res) => {
       return res.status(400).json("Invalid cover picture format. Please provide an image file.");
     }
 
-    if (!email || !username || !name) {
+    if (!email || !name) {
         return res.status(400).json("Email, username, and name are required fields.");
     }
     
@@ -56,11 +56,11 @@ export const updateUser = (req, res) => {
       }
 
       const q =
-        "UPDATE user_profile SET `email`=?,`username`=?,`name`=?,`coverPic`=?, `profilePic`=? WHERE id=? ";
+        "UPDATE user_profile SET `email`=?,`name`=?,`coverPic`=?, `profilePic`=? WHERE id=? ";
 
       db.query(
         q,
-        [email, username, name, coverPic, profilePic, userId],
+        [email, name, coverPic, profilePic, userId],
         (err, data) => {
           if (err) res.status(500).json(err);
           if (data.affectedRows > 0) return res.json("Updated!");

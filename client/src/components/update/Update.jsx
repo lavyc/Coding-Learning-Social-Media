@@ -13,7 +13,6 @@ const Update = ({ setOpenUpdate, user }) => {
   const [texts, setTexts] = useState({
     email: user.email,
     name: user.name,
-    username: user.username
   });
 
   const upload = async (file) => {
@@ -40,7 +39,7 @@ const Update = ({ setOpenUpdate, user }) => {
       return makeRequest.put("/users", user);
     },
       onSuccess: () => {
-        if (!texts.email || !texts.username || !texts.name) {
+        if (!texts.email || !texts.name) {
           setSnackbarMessage("All fields are required.");
           setSnackbarOpen(true);
           return; // Exit early if any field is empty
@@ -128,14 +127,6 @@ const Update = ({ setOpenUpdate, user }) => {
             type="text"
             value={texts.email}
             name="email"
-            onChange={handleChange}
-            
-          />
-          <label>Username</label>
-          <input
-            type="text"
-            value={texts.username}
-            name="username"
             onChange={handleChange}
             
           />
