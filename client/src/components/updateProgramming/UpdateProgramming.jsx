@@ -130,7 +130,7 @@ const UpdateProgramming = ({ setOpenUpdatePrg, user }) => {
   return (
     <div className="update">
       <div className="wrapper">
-        <h1>Update Your Programming Skills</h1>
+        <h1>Update Your Programming Information</h1>
         <form>
           <label>Programming Level</label>
           <select id="programmingLevel" name="programmingLevel" 
