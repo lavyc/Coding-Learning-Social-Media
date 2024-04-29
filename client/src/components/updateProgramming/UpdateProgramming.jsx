@@ -81,7 +81,6 @@ const UpdateProgramming = ({ setOpenUpdatePrg, user }) => {
     if (selectedSkills.length <= 5) {
       setSelectedSkills(selectedSkills);
     }
-    console.log("Selected Skills:", selectedSkills);
   };
 
   const handleLanguageChange = (selectedList) => {
@@ -89,7 +88,6 @@ const UpdateProgramming = ({ setOpenUpdatePrg, user }) => {
     if (programmingLanguages.length <= 5) {
       setProgrammingLanguages(programmingLanguages);
     }
-    console.log("Selected Languages:", programmingLanguages); 
   };
 
   const queryClient = useQueryClient();
@@ -115,7 +113,26 @@ const UpdateProgramming = ({ setOpenUpdatePrg, user }) => {
 
   const handleClick = async (e) => {
     e.preventDefault();
+    // Validate programming level
+    if (!programmingLevel) {
+      setSnackbarMessage("Please select a programming level!");
+      setSnackbarOpen(true);
+      return;
+    }
 
+    // Validate programming languages
+    if (programmingLanguages.length === 0) {
+      setSnackbarMessage("Please select at least one programming language!");
+      setSnackbarOpen(true);
+      return;
+    }
+
+    // Validate selected skills
+    if (selectedSkills.length === 0) {
+      setSnackbarMessage("Please select at least one skillset!");
+      setSnackbarOpen(true);
+      return;
+    }
     mutation.mutate({
       programmingLevel: programmingLevel,
       programmingLanguages: programmingLanguages,
